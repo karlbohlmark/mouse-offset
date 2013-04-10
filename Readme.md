@@ -13,7 +13,7 @@ Example:
 
 ```js
 var mouseOffset = require('mouse-offset')
-var offset = mouseOffset(mouseEvent, element)
+var offset = mouseOffset(element, mouseEvent)
 // mouseEvent offset {top, left} relative to element
 ```
 
