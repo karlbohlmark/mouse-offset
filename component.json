@@ -1,0 +1,13 @@
+{
+  "name": "mouse-offset",
+  "repo": "karlbohlmark/mouse-offset",
+  "description": "Get mouse event offset relative to element",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
