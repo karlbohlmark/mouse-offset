@@ -1,0 +1,49 @@
+<!doctype html>
+
+<meta charset="utf8">
+
+<style>
+	.pink {
+		width:100px;
+		height:100px;
+		background-color: hotpink;
+	}
+
+	.red {
+		position: relative;
+		left: 100px;
+		width:100px;
+		height:100px;
+		background-color: red;
+	}
+
+	.green {
+		width: 300px;
+		background-color: green;
+	}
+</style>
+
+<div class="green">
+	<div style="height:100px"></div>
+	<div class=pink></div>
+	<div class=red></div>
+</div>
+
+<div id="results"></div>
+
+<script src="build/build.js"></script>
+<script>
+	var offset = require('mouse-offset')
+	var q = document.querySelector.bind(document)
+
+	var results = q('#results')
+
+	q('.green').addEventListener('click', function (e) {
+		results.innerHTML = '<br>' + results.innerHTML
+		;['pink', 'green', 'red'].forEach(function (name) {
+			var pos = offset(q('.' + name), e)
+			results.innerHTML =  name + ' ' + JSON.stringify(pos) + '<br>' + results.innerHTML
+		})
+	})
+
+</script>
